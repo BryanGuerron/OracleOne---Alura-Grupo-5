@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de texto - Oracle ONE</title>
+    <link rel="icon" type="image/x-icon" href="img/alura.ico" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <main class="main">
+        <section class="logo">
+            <img class="img-alura" src="img/Logo.png" alt="Logo de Alura" />
+        </section>
+        <section class="form">
+            <textarea class="texto-textarea" id="texto" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="buttons">
+                <button class="button encriptar-button" id="encriptar">
+                    Encriptar
+                </button>
+                <button class="button desencriptar-button" id="desencriptar">
+                    Desencriptar
+                </button>
+            </div>
+        </section>
+        <section class="salida-texto">
+            <section class="salida-texto-inicial" id="textoInicial">
+                <div class="imagen-salida-texto">
+                    <img src="img/Muñeco.png" alt="Imagen de un muñeco" />
+                </div>
+                <div class="texto-img">
+                    <h2 class="texto-mensajeNoEncontrado">
+                        Ningún mensaje fue encontrado
+                    </h2>
+                    <p class="texto-mensajeIngresar">
+                        Ingresa el texto que desees encriptar o desencriptar
+                    </p>
+                </div>
+            </section>
+            <section class="salida-texto-inicial salida-texto-procesado" id="textoProcesado">
+                <div class="texto-salida">
+                    <p class="salida-texto-encriptado" id="mensajeEncriptado"></p>
+                </div>
+                <button class="salida-boton" id="copiarMensajeEncriptado">
+                    Copiar
+                </button>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <h2 class="developer">
+            Developed by <a href="https://www.linkedin.com/in/bryanguerron/" rel="noopener noreferrer">Bryan Guerron</a>
+        </h2>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

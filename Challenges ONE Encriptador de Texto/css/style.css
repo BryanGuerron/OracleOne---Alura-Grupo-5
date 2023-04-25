@@ -1,0 +1,334 @@
+.form, body {
+    flex-direction: column;
+}
+.salida-texto-encriptado, .texto-mensajeNoEncontrado, .texto-mensajeIngresar {
+    text-align: center;
+}
+@media (prefers-reduced-motion:reduce) {
+    * {
+    animation: none;
+    transition: none;
+}
+}* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+img{
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+a {
+    display: block;
+}
+a, b, blockquote, em, h1, h2, h3, h4, h5, h6, i, p, span, strong, u {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+}
+blockquote:after, blockquote:before, q:after, q:before {
+    content: "";
+    content: none;
+}
+button, form, input, label, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    hyphens: auto;
+    background-color: transparent;
+    display: block;
+    color: inherit;
+}
+body{
+    min-height: 100vh;
+    font-size: 100%;
+    line-height: 1.4em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #495057; 
+    color: #FFF;
+    display: flex;
+    font-family: Roboto, sans-serif;
+}
+.main{
+    width: 100%;
+    min-height: 95vh;
+    padding: 2em 0;
+    display: flex;
+    flex-direction: row;
+}
+.img-alura {
+    max-width: 8em;
+    position: absolute;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    min-width: 10vw;
+}
+.form{
+    margin-top: 4em;
+    min-height: 60vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.texto-textarea{
+    width: 100%;
+    min-height: 60vh;
+    color: #FFFFFF;
+    font-size: 1.75em;
+    resize: none;
+    height: 100%
+}
+.texto-textarea::placeholder {
+    color: #FFFFFF;
+}
+.texto-textarea:focus {
+    outline: none;
+}
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.button { 
+    border-radius: 0.5em;
+    padding: 1em;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+}
+.encriptar-button{
+    background-color: #609ED4;
+    color: #FFFFFF;
+    transition: background 250ms;
+    margin-right: .75em;
+}
+.encriptar-button:hover {
+    background: #007bff;
+}
+.desencriptar-button{
+    background-color: #CED4DA;
+    color: #FFFFFF;
+    transition: background 250ms, border 250ms;
+    margin-left: .75em;
+}
+.desencriptar-button:hover {
+    background: #0A3871;
+}
+.salida-texto{
+    width: 30vw;
+    min-height: 60vh;
+    max-height: calc(90vh - 2em);
+    padding: 0 3em;
+}
+.salida-texto-inicial{
+    background-color: #CED4DA;
+    box-shadow: 0em 0em 2em 0em rgba(0, 0, 0, 0.38);
+    -webkit-box-shadow: 0em 0em 2em 0em rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 0em 0em 2em 0em rgba(0, 0, 0, 0.38);
+    height: 100%;
+    width: 100%;
+    border-radius: 1.5em;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.texto-img{
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.texto-mensajeNoEncontrado{
+    font-size: 2em;
+    text-align: center;
+    line-height: 1em;
+    font-weight: 600;
+    color: #356EA9;
+}
+.texto-mensajeIngresar{
+    margin-top: 0.5em;
+    width: 75%;
+    text-align: center;
+}
+.salida-texto-procesado{
+    justify-content: space-between;
+    display: none;
+}
+.texto-salida{
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+}
+.salida-texto-encriptado{
+    font-size: 1.75em;
+    text-align: center;
+    line-height: 1em;
+    max-height: 94vh;
+    word-break: break-all;
+}
+.salida-boton{
+    border-radius: 0.5em;
+    margin-top: 1em;
+    padding: 1em;
+    min-height: 6vh;
+    font-weight: 600;
+    font-family: 1.5em;
+    width: 100%;
+    cursor: pointer;
+    background-color: #609ED4;
+    color: #FFFFFF;
+    transition: opacity 250ms;
+    margin-left: 0.75em;
+}
+.salida-boton:hover {
+    opacity: 0.8;
+}
+footer {
+    width: 100%;
+    min-height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+footer h2 {
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+}
+footer h2 a {
+    margin-left: 0.4em;
+    text-decoration: underline;
+}
+@media screen and (max-width: 1200px) {
+    .main {
+      width: 100%;
+    }
+    .logo {
+      min-width: 7.5em;
+    }
+    .salida-texto {
+      width: 45vw;
+    }
+}
+@media screen and (max-width: 1023px) {
+    body {
+      flex-direction: column;
+    }
+    .main {
+      width: 100%;
+      flex-direction: column;
+    }
+    .logo {
+      min-width: 7.5em;
+      justify-content: flex-start;
+    }
+    .form {
+      width: 100%;
+      padding: 2em;
+    }
+    .texto-textarea {
+      font-size: 1.5em;
+    }
+    .salida-texto {
+      width: 100%;
+      min-height: auto;
+      padding: 2em;
+    }
+    .salida-texto-inicial {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+    .texto-img {
+      margin: 0;
+    }
+    .texto-mensajeNoEncontrado {
+      font-size: 1em;
+    }
+    .texto-mensajeIngresar {
+      font-size: 0.9em;
+    }
+    .salida-texto-encriptado {
+      font-size: 1.5em;
+    }
+    .texto-salida {
+      max-height: 30vh;
+      min-height: 5vh;
+    }
+}
+@media screen and (max-width: 767px) {
+    .buttons {
+      flex-direction: column;
+    }
+    .button {
+      margin: 0;
+      margin-top: 1em;
+    }
+    .texto-textarea {
+      font-size: 1.25em;
+    }
+    .salida-texto-encriptado {
+      font-size: 1.25em;
+    }
+}
+::-webkit-scrollbar {
+  width: 0.25em;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 1em;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1em;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+button:after {
+    content: "";
+    background: rgba(0, 157, 255, 0.5);
+    display: block;
+    position: absolute;
+    opacity: 0;
+    width: 10em;
+    height: 10em;
+    border-radius: 100%;
+    padding: 0;
+    margin: 0;
+    transition: all 1s;
+    transform: scale(5);
+    aspect-ratio: 1;
+}
+button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+    transform: scale(0);
+}
+button:focus {
+    outline: 0;
+}
